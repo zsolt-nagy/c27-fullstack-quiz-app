@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/c27-quiz-fullstack-app/static/css/main.f0bd0b55.css",
+    "main.js": "/c27-quiz-fullstack-app/static/js/main.0e571daa.js",
+    "index.html": "/c27-quiz-fullstack-app/index.html",
+    "main.f0bd0b55.css.map": "/c27-quiz-fullstack-app/static/css/main.f0bd0b55.css.map",
+    "main.0e571daa.js.map": "/c27-quiz-fullstack-app/static/js/main.0e571daa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f0bd0b55.css",
+    "static/js/main.0e571daa.js"
+  ]
+}
