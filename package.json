@@ -1,6 +1,6 @@
 {
-  "homepage": "https://zsolt-nagy.github.io/c27-quiz-fullstack-app",
-  "name": "c27-quiz-fullstack-app",
+  "homepage": "https://zsolt-nagy.github.io/c27-fullstack-quiz-app",
+  "name": "c27-fullstack-quiz-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
