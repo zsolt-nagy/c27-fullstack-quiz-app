@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function NewUserForm() {
+export default function NewUserForm(props) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
 
@@ -28,8 +28,8 @@ export default function NewUserForm() {
             cache: 'default'
         })
             .then(x => x.json())
-            .then(response => {
-                console.log('POST request result', response);
+            .then(userList => {
+                props.loadUsers(userList);
             });     
     }
 

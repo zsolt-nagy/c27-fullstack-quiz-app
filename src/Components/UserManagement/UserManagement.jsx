@@ -6,13 +6,19 @@ import './UserManagement.css';
 export default function UserManagement() {
     const [users, setUsers] = useState([]);
 
-    useEffect(() => {
-        fetch('https://un1hm7-8080.csb.app/api/users')
-            .then(x=>x.json())
-            .then(response => {
-                setUsers(response);
-            });
-    }, []);
+    const loadUsers = (newUsers = null) => {
+        if (Array.isArray(newUsers)) {
+            setUsers(newUsers);
+        } else {
+            fetch('https://un1hm7-8080.csb.app/api/users')
+                .then(x=>x.json())
+                .then(response => {
+                    setUsers(response);
+                });
+        }
+    }
+
+    useEffect(loadUsers, []);
 
     const UserItemListJsx = users.map(user => 
         <UserItem name={user.name} email={user.email} key={user.id} id={user.id} />
@@ -22,7 +28,7 @@ export default function UserManagement() {
         <div>
             <h2>User Management</h2>
             <section>
-                <NewUserForm />
+                <NewUserForm loadUsers={loadUsers} />
             </section>
             <section>
                 <ul className="user-list">
